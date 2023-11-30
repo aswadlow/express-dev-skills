@@ -6,11 +6,21 @@ var skillsCtrl = require('../controllers/skill')
 
 //all actual paths start with "/skill"
 
-//Get /skill
+//GET /skill
 router.get('/', skillsCtrl.index);
 
-//Get / skill/:id
+//GET /skill/new
+router.get('/new', skillsCtrl.new )
+
+//GET /skill/:id
 router.get('/:id', skillsCtrl.show)
+
+//POST /skill
+router.post('/', skillsCtrl.create)
+
+//DELETE /skill.:id
+router.delete('/:id', skillsCtrl.delete)
+
 
 module.exports = router;
  
